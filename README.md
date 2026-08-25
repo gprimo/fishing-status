@@ -12,7 +12,7 @@ Caso não queira ter o trabalho eu disponibilizei um drive os csvs que utilizei 
   * Filtragem de registros inconsistentes.
   * Exportação para formato **Parquet** (`.parquet`), aproveitando o particionamento e compressão nativos do Spark.
 
-### 2. `02_analytics.ipynb` (SparkSQL, Transformação & Inferências)
+### 2. `02_bronze.ipynb` (SparkSQL, Transformação & Inferências)
 * **Objetivo:** Registrar os dados Parquet em views temporárias (`createOrReplaceTempView`), executar consultas complexas via SparkSQL e realizar inferências analíticas.
 * **Principais Etapas:**
   * Carga do dataset Parquet pré-tratado na `SparkSession`.
@@ -20,7 +20,7 @@ Caso não queira ter o trabalho eu disponibilizei um drive os csvs que utilizei 
   * Modelagem e transformações com window functions, agregações e joins otimizados.
   * Geração de **inferências e análises estatísticas** sobre a atividade pesqueira (ex: volume capturado por espécie, eficiência por embarcação, sazonalidade e análise espacial).
 
-### 3. `03_gold.ipynb` (Base Consolidada & Entrega Final)
+### 3. `03_silver.ipynb` (Base Consolidada & Entrega Final)
 * **Objetivo:** Consolidar a camada analítica final em uma base unificada (Gold) pronta para relatórios, dashboards ou consumo por equipes de BI/Data Science.
 * **Principais Etapas:**
   * Consolidação final das tabelas/views geradas no SparkSQL.
